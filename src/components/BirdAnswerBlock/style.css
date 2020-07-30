@@ -5,6 +5,14 @@
   padding-top: 5px;
 }
 
+.answerVariantTrue {
+  color: green,
+}
+
+.answerVariantFalse {
+  color: red,
+}
+
 .container {
   display: block;
 }

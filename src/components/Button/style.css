@@ -20,6 +20,10 @@
   background: grey;
 }
 
+.pressed {
+    background-color: lime;
+}
+
 .button:hover {
   -webkit-animation: rainbow-background 5s infinite;
   animation: rainbow-background 5s infinite;
