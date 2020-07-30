@@ -8,11 +8,14 @@ const Button = ({
   text,
   onClick,
   pressed,
+  isWorking,
+  dataId,
 }) => (
   <button
     className={`${className} ${pressed ? 'pressed' : ''}`}
     type="button"
-    onClick={onClick}
+    onClick={isWorking ? onClick : () => {}}
+    data-id={dataId}
   >
     {text}
   </button>
@@ -22,6 +25,8 @@ Button.defaultProps = {
   pressed: false,
   className: 'button',
   onClick: () => {},
+  isWorking: true,
+  dataId: '',
 };
 
 Button.propTypes = {
@@ -29,6 +34,8 @@ Button.propTypes = {
   text: PropTypes.string.isRequired,
   pressed: PropTypes.bool,
   onClick: PropTypes.func,
+  isWorking: PropTypes.bool,
+  dataId: PropTypes.string,
 };
 
 export default Button;

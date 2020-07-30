@@ -1,9 +1,18 @@
 import { connect } from 'react-redux';
 
 import BirdInformationBlock from './BirdInformationBlock';
-// import { increaseLevel } from '../../redux/actions/creators/songBirdData';
 
-const mapStateToProps = () => ({});
+const mapStateToProps = ({
+  songBirdData: {
+    rightBird,
+    currentBird,
+    isReadyForNextLevel,
+  },
+}) => ({
+  rightBird,
+  currentBird,
+  isReadyForNextLevel,
+});
 
 const actionCreators = {};
 
