@@ -1,0 +1,10 @@
+// songBirdData
+export const RESET_INITIAL_SONG_BIRD_DATA = 'RESET_INITIAL_SONG_BIRD_DATA';
+export const ADD_SCORE = 'ADD_SCORE';
+export const RESET_SCORE = 'RESET_SCORE';
+export const INCREASE_LEVEL = 'INCREASE_LEVEL';
+export const RESET_LEVEL = 'RESET_LEVEL';
+
+// initialbirdAnswerBlock
+export const RESET_BIRD_ANSWER_BLOCK = 'RESET_BIRD_ANSWER_BLOCK';
+export const PRESS_BIRD_ANSWER_BUTTON = 'PRESS_BIRD_ANSWER_BUTTON';
