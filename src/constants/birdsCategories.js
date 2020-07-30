@@ -1,0 +1,90 @@
+const arrCategorys = [
+  {
+    id: '0',
+    categoryNumber: 0,
+    name: 'Разминка',
+    birds: [
+      {
+        id: 'ksdmf',
+        img: '123',
+        mp3: 'src',
+        ruName: 'Грач-1',
+        latName: 'Corvus frugilegus',
+        description: 'adsdln;fvlnz;lfvn;zdflknv',
+        pressed: false,
+      },
+      {
+        id: 'ksdmf2',
+        img: '123',
+        mp3: 'src',
+        ruName: 'Грач-2',
+        latName: 'Corvus frugilegus',
+        description: 'adsdln;fvlnz;lfvn;zdflknv',
+        pressed: false,
+      },
+      {
+        id: 'ksdmf3',
+        img: '123',
+        mp3: 'src',
+        ruName: 'Грач1',
+        latName: 'Corvus frugilegus',
+        description: 'adsdln;fvlnz;lfvn;zdflknv',
+        pressed: false,
+      },
+      {
+        id: 'ksdmf4',
+        img: '123',
+        mp3: 'src',
+        ruName: 'Грач2',
+        latName: 'Corvus frugilegus',
+        description: 'adsdln;fvlnz;lfvn;zdflknv',
+        pressed: false,
+      },
+      {
+        id: 'ksdmf5',
+        img: '123',
+        mp3: 'src',
+        ruName: 'Грач3',
+        latName: 'Corvus frugilegus',
+        description: 'adsdln;fvlnz;lfvn;zdflknv',
+        pressed: false,
+      },
+      {
+        id: 'ksdmf6',
+        img: '123',
+        mp3: 'src',
+        ruName: 'Грач4',
+        latName: 'Corvus frugilegus',
+        description: 'adsdln;fvlnz;lfvn;zdflknv',
+        pressed: false,
+      },
+    ],
+  },
+  {
+    id: '1',
+    categoryNumber: 1,
+    name: 'Воробьиные',
+  },
+  {
+    id: '2',
+    categoryNumber: 2,
+    name: 'Лесные птицы',
+  },
+  {
+    id: '3',
+    categoryNumber: 3,
+    name: 'Певчие птицы',
+  },
+  {
+    id: '4',
+    categoryNumber: 4,
+    name: 'Хищные птицы',
+  },
+  {
+    id: '5',
+    categoryNumber: 5,
+    name: 'Морские птицы',
+  },
+];
+
+export default arrCategorys;
