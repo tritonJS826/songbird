@@ -2,20 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import birdsCategories from '../../constants/birdsCategories';
-import './ProgressBar.css';
+import style from './ProgressBar.module.scss';
 
 const ProgressBar = ({ level }) => {
   const arrCategory = birdsCategories.map(({ id, name, categoryNumber }) => (
     <li
-      className={categoryNumber <= +level ? 'list marked' : `list ${id}`}
+      className={categoryNumber <= +level ? style.completeLi : style.li}
       key={id}
     >
-      <div>{name}</div>
+      {name}
     </li>
   ));
 
   return (
-    <ul className="progressBar">
+    <ul className={style.progressBar}>
       {arrCategory}
     </ul>
   );
