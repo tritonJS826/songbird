@@ -1,0 +1,18 @@
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #303030;
+  padding-top: 5px;
+}
+
+.informationBlock {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  max-width: 45%;
+  margin: 5px 10%;
+  justify-content: space-between;
+  padding-top: 5px;
+  color: white;
+}

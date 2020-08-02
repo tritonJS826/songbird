@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import birdsCategories from '../../constants/birdsCategories';
 import changeAnswers from '../../helpers/changeAnswers';
-import './style.css';
+import style from './style.module.scss';
 import Button from '../Button';
 
 const BirdAnswerBlock = ({
@@ -21,7 +21,6 @@ const BirdAnswerBlock = ({
   setCurrentBird,
 }) => {
   useEffect(() => {
-    console.log(level, birdsCategories.length);
     if (level < birdsCategories.length) {
       const { birds } = birdsCategories[level];
       setAnswers(birds);
@@ -48,11 +47,18 @@ const BirdAnswerBlock = ({
     setAnswers(newAnswers);
   };
 
+  const styleButton = (pressed, isTrueAnswer) => {
+    if (!pressed) return style.answerVariant;
+    return (pressed && isTrueAnswer)
+      ? style.answerVariantTrue
+      : style.answerVariantFalse;
+  };
+
   const answerVariants = answers.map((bird) => (
     <Button
       key={bird.id}
       dataId={bird.id}
-      className={(bird.pressed && bird.id === rightBird.id) ? 'answerVariantTrue' : 'answerVariantFalse'}
+      className={styleButton(bird.pressed, bird.id === rightBird.id)}
       text={bird.ruName}
       onClick={answerFunction}
       pressed={bird.pressed}
@@ -61,7 +67,7 @@ const BirdAnswerBlock = ({
   ));
 
   return (
-    <div className="c">
+    <div className={style.flexColumn}>
       {answerVariants}
     </div>
   );

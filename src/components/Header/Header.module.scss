@@ -1,0 +1,29 @@
+.header {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #222;
+
+  .topPanel {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    justify-content: space-between;
+
+    .logo {
+      width: 25%;
+      height: 10%;
+      margin-left: 20px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .score {
+      font-weight: 500;
+      color: white;
+      font-size: 20px;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+}

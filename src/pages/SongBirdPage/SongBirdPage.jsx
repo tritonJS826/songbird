@@ -6,7 +6,7 @@ import Header from '../../components/Header';
 import BirdInformationBlock from '../../components/BirdInformationBlock';
 import BirdAnswerBlock from '../../components/BirdAnswerBlock';
 import CongratulationsBlock from '../../components/CongratulationsBlock';
-import './style.css';
+import style from './style.module.scss';
 
 function SongBirdPage({
   increaseLevel,
@@ -30,15 +30,15 @@ function SongBirdPage({
   }
 
   return (
-    <div className="container">
+    <div className={style.container}>
       <Header />
       <BirdInformationBlock />
-      <div className="gorizontalDiv">
+      <div className={style.flexRow}>
         <BirdAnswerBlock />
         <BirdInformationBlock broad />
       </div>
       <Button
-        className="nextLevelButton"
+        className={style.nextLevelButton}
         text="Next Level"
         onClick={onNextLevelButton}
         pressed={!isReadyForNextLevel}

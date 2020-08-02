@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './style.css';
+import classNames from 'classnames';
+import style from './style.module.scss';
+
+const buttonClass = (className1, className2) => classNames(className1, className2);
 
 const Button = ({
   className,
@@ -12,7 +15,7 @@ const Button = ({
   dataId,
 }) => (
   <button
-    className={`${className} ${pressed ? 'pressed' : ''}`}
+    className={`${buttonClass(className, style.button)} ${pressed ? style.pressed : ''}`}
     type="button"
     onClick={isWorking ? onClick : () => {}}
     data-id={dataId}

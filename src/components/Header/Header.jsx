@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+// import classNames from 'classnames';
 import ProgressBar from '../ProgressBar';
 
-import './header.scss';
+import Logo from '../../img/Logo.png';
+import style from './Header.module.scss';
 
 const Header = ({ score }) => (
-  <div className="header">
-    <div className="top-panel">
-      <div className="logo">
-        Logo
-      </div>
-      <h5>
+  <div className={style.header}>
+    <div className={style.topPanel}>
+      <img src={Logo} alt="Logo" className={style.logo} />
+      <span className={style.score}>
         Score:
-        <span className="score">{score}</span>
-      </h5>
+        {score}
+      </span>
     </div>
     <ProgressBar />
   </div>

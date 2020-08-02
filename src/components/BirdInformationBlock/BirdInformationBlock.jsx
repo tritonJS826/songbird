@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './style.css';
+import style from './style.module.scss';
 import Player from '../Player';
 
 const BirdInformationBlock = ({
@@ -12,17 +12,17 @@ const BirdInformationBlock = ({
 }) => {
   if (broad) {
     return (
-      <div className="container">
+      <div className={style.informationBlock}>
         {currentBird.id && (
           <>
             <img src="" alt="bird" />
-            ruName
-            latName
+            {currentBird.ruName}
+            {currentBird.latName}
             <Player
               audio={rightBird}
               isStarted
             />
-            description
+            {currentBird.description}
           </>
         )}
         {!currentBird.id && (
@@ -37,7 +37,7 @@ const BirdInformationBlock = ({
   }
 
   return (
-    <div className="container">
+    <div className={style.container}>
       {!isReadyForNextLevel && (
         <>
           <img src="" alt="templateBird" />
