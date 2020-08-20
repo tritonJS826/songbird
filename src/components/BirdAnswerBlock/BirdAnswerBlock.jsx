@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import birdsCategories from '../../constants/birdsCategories';
 import changeAnswers from '../../helpers/changeAnswers';
+import playAudio from '../../helpers/playAudio';
 import style from './style.module.scss';
 import Button from '../Button';
 
@@ -26,7 +27,6 @@ const BirdAnswerBlock = ({
       setAnswers(birds);
       setRightBird(birds[Math.floor(Math.random() * birds.length)]);
     } else {
-      // выводить поздравления тут (редакс тугл)
       setIsCongratulationsShowed(true);
     }
   }, [level]);
@@ -38,13 +38,21 @@ const BirdAnswerBlock = ({
     setCurrentBird(currentBird);
     if (!isReadyForNextLevel) {
       if (rightId === id) {
+        playAudio('win');
         setIsReadyForNextLevel(true);
         addScore(additionalScore);
       } else {
+        playAudio('error');
         decreaseAdditionalScore();
       }
     }
     setAnswers(newAnswers);
+  };
+
+  const checkBird = ({ target: { dataset: { id } } }) => {
+    const newAnswers = changeAnswers(answers, id);
+    const currentBird = newAnswers.find((el) => el.id === id);
+    setCurrentBird(currentBird);
   };
 
   const styleButton = (pressed, isTrueAnswer) => {
@@ -60,14 +68,14 @@ const BirdAnswerBlock = ({
       dataId={bird.id}
       className={styleButton(bird.pressed, bird.id === rightBird.id)}
       text={bird.ruName}
-      onClick={answerFunction}
+      onClick={!bird.pressed ? answerFunction : checkBird}
       pressed={bird.pressed}
-      isWorking={!bird.pressed}
     />
   ));
 
   return (
     <div className={style.flexColumn}>
+      {console.log(rightBird.ruName)}
       {answerVariants}
     </div>
   );

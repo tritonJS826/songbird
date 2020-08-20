@@ -10,12 +10,20 @@
     margin-bottom: 5px;
     justify-content: space-between;
 
+    // .logo {
+    //   width: 50%;
+    //   max-width: 400px;
+    //   height: 10%;
+    //   margin-left: 20px;
+    //   background-size: contain;
+    //   background-repeat: no-repeat;
+    // }
+
     .logo {
-      width: 25%;
-      height: 10%;
-      margin-left: 20px;
-      background-size: contain;
-      background-repeat: no-repeat;
+      font-size: 2em;
+      color: #007c5d;
+      font-family: 'Rock Salt', cursive;
+      font-weight: normal;
     }
 
     .score {

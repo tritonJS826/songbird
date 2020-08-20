@@ -6,18 +6,18 @@ import style from './ProgressBar.module.scss';
 
 const ProgressBar = ({ level }) => {
   const arrCategory = birdsCategories.map(({ id, name, categoryNumber }) => (
-    <li
+    <div
       className={categoryNumber <= +level ? style.completeLi : style.li}
       key={id}
     >
       {name}
-    </li>
+    </div>
   ));
 
   return (
-    <ul className={style.progressBar}>
+    <div className={style.progressBar}>
       {arrCategory}
-    </ul>
+    </div>
   );
 };
 

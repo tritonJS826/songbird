@@ -2,34 +2,29 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import style from './style.module.scss';
-import Player from '../Player';
+import AudioPlayer from '../AudioPlayer';
 
 const BirdInformationBlock = ({
-  rightBird,
-  currentBird,
-  broad,
-  isReadyForNextLevel,
+  rightBird, currentBird, broad, isReadyForNextLevel,
 }) => {
   if (broad) {
     return (
       <div className={style.informationBlock}>
         {currentBird.id && (
           <>
-            <img src="" alt="bird" />
-            {currentBird.ruName}
-            {currentBird.latName}
-            <Player
-              audio={rightBird}
+            <AudioPlayer
+              audio={currentBird.audio}
+              songName={currentBird.ruName}
+              songArtist={currentBird.latName}
+              img={currentBird.img}
+              description={currentBird.description}
               isStarted
             />
-            {currentBird.description}
           </>
         )}
         {!currentBird.id && (
           <>
-            <span>
-              Послушайте плеер.Выберите птицу из списка
-            </span>
+            <span>Послушайте плеер.Выберите животное из списка</span>
           </>
         )}
       </div>
@@ -40,21 +35,26 @@ const BirdInformationBlock = ({
     <div className={style.container}>
       {!isReadyForNextLevel && (
         <>
-          <img src="" alt="templateBird" />
-          <span>******</span>
+          <AudioPlayer
+            audio={rightBird.audio}
+            songName="******"
+            songArtist="******"
+            img="******"
+            isStarted
+          />
         </>
       )}
       {isReadyForNextLevel && (
         <>
-          <img src="" alt="curentBird" />
-          <span>realNameBird</span>
+          <AudioPlayer
+            audio={rightBird.audio}
+            songName={rightBird.ruName}
+            songArtist={rightBird.latName}
+            img={rightBird.img}
+            isStarted
+          />
         </>
       )}
-
-      <Player
-        audio={currentBird}
-        isStarted
-      />
     </div>
   );
 };
