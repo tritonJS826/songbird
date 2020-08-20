@@ -1,10 +1,7 @@
-заполнить компоненты
-   =>  захардкодить данные птиц (взять с демо (https://birds-quiz.netlify.app/#))
-SCCS copy
 
+A small game in which you have to guess the name of the animal by the sound it makes.
 
-ready:
-создать все компоненты (+ подключить к ним редакс)
-linter connect
-=>  SCore counter
-=>  сравниватель
+Used technologies
+- [x] React (CRA)
+- [x] Redux (thunk)
+- [x] eslint (airbnb)
