@@ -5,6 +5,7 @@ import {
   increaseLevel,
   setIsReadyForNextLevel,
   setRightBird,
+  setCurrentBird,
   resetAdditionalScore,
 } from '../../redux/actions/creators/songBirdData';
 
@@ -24,6 +25,7 @@ const actionCreators = {
   increaseLevel,
   setIsReadyForNextLevel,
   setRightBird,
+  setCurrentBird,
   resetAdditionalScore,
 };
 

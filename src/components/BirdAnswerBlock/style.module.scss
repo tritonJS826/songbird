@@ -1,21 +1,28 @@
 .flexColumn {
   display: flex;
   flex-direction: column;
-  flex: auto;
-  max-width: 45%;
-  margin: 5px 10%;
   justify-content: space-between;
   padding-top: 5px;
+  min-width: 200px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
 
   .answerVariantTrue {
-    color: green,;
+    color: green;
+    height: 15%;
+    min-height: 35px;
   }
 
   .answerVariantFalse {
-    color: red,;
+    color: red;
+    height: 15%;
+    min-height: 35px;
   }
 
   .answerVariant {
     color: white;
+    height: 15%;
+    min-height: 35px;
   }
 }

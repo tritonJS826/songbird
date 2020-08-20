@@ -9,10 +9,11 @@
 .informationBlock {
   display: flex;
   flex-direction: column;
-  flex: auto;
-  max-width: 45%;
-  margin: 5px 10%;
+  min-width: 300px;
   justify-content: space-between;
   padding-top: 5px;
   color: white;
+  flex-grow: 3;
+  flex-shrink: 1;
+  flex-basis: 65%;
 }

@@ -14,11 +14,13 @@ function SongBirdPage({
   isReadyForNextLevel,
   resetAdditionalScore,
   isCongratulationsShowed,
+  setCurrentBird,
 }) {
   const onNextLevelButton = () => {
     setIsReadyForNextLevel(false);
     resetAdditionalScore();
     increaseLevel();
+    setCurrentBird({});
   };
   if (isCongratulationsShowed) {
     return (
@@ -54,6 +56,7 @@ SongBirdPage.propTypes = {
   isReadyForNextLevel: PropTypes.bool.isRequired,
   resetAdditionalScore: PropTypes.func.isRequired,
   isCongratulationsShowed: PropTypes.bool.isRequired,
+  setCurrentBird: PropTypes.func.isRequired,
 };
 
 export default SongBirdPage;

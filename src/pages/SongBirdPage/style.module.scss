@@ -1,8 +1,8 @@
 .flexRow {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 5px;
 }
 
 .container {
